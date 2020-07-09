@@ -6,19 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>我的第一篇博客文章 | Hexo</title>
+  <title>通过hexo搭建自己的第一个博客 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="第一章内容  第二章内容  参考文献www.baidu.com">
+  <meta name="description" content="这是我第一次尝试写博客，请多多指教。安装博客使用的框架是hexo 第一步：安装git（后续的一切操作都基于git） 通过git官网  https:&#x2F;&#x2F;git-scm.com&#x2F;downloads  下载相应的版本的git，我这里下载的是Windows版本。  安装教程参考  https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_39377418&#x2F;article&#x2F;details&#x2F;95199800  讲的非">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的第一篇博客文章">
-<meta property="og:url" content="http://yoursite.com/2020/07/08/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/index.html">
+<meta property="og:title" content="通过hexo搭建自己的第一个博客">
+<meta property="og:url" content="http://yoursite.com/2020/07/09/%E9%80%9A%E8%BF%87hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="第一章内容  第二章内容  参考文献www.baidu.com">
+<meta property="og:description" content="这是我第一次尝试写博客，请多多指教。安装博客使用的框架是hexo 第一步：安装git（后续的一切操作都基于git） 通过git官网  https:&#x2F;&#x2F;git-scm.com&#x2F;downloads  下载相应的版本的git，我这里下载的是Windows版本。  安装教程参考  https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_39377418&#x2F;article&#x2F;details&#x2F;95199800  讲的非">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-08T02:21:53.000Z">
-<meta property="article:modified_time" content="2020-07-08T02:27:10.202Z">
+<meta property="og:image" content="http://yoursite.com/2020/07/09/%E9%80%9A%E8%BF%87hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/%E9%80%9A%E8%BF%87hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/git%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/09/%E9%80%9A%E8%BF%87hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/%E9%80%9A%E8%BF%87hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/nodejs%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png">
+<meta property="article:published_time" content="2020-07-09T07:45:39.000Z">
+<meta property="article:modified_time" content="2020-07-09T07:51:52.135Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/07/09/%E9%80%9A%E8%BF%87hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/%E9%80%9A%E8%BF%87hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/git%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,31 +157,37 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-我的第一篇博客文章" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-通过hexo搭建自己的第一个博客" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      我的第一篇博客文章
+      通过hexo搭建自己的第一个博客
     </h1>
   
 
         
-        <a href="/2020/07/08/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-07-08T02:21:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-08</time>
+        <a href="/2020/07/09/%E9%80%9A%E8%BF%87hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
+  	<time datetime="2020-07-09T07:45:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-09</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>内容</p>
+        <h1 id="这是我第一次尝试写博客，请多多指教。"><a href="#这是我第一次尝试写博客，请多多指教。" class="headerlink" title="这是我第一次尝试写博客，请多多指教。"></a>这是我第一次尝试写博客，请多多指教。</h1><h2 id="安装博客使用的框架是hexo"><a href="#安装博客使用的框架是hexo" class="headerlink" title="安装博客使用的框架是hexo"></a>安装博客使用的框架是hexo</h2><hr>
+<h2 id="第一步：安装git（后续的一切操作都基于git）"><a href="#第一步：安装git（后续的一切操作都基于git）" class="headerlink" title="第一步：安装git（后续的一切操作都基于git）"></a>第一步：安装git（后续的一切操作都基于git）</h2><ol>
+<li><p>通过git官网  <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">https://git-scm.com/downloads</a>  下载相应的版本的git，我这里下载的是Windows版本。</p>
+</li>
+<li><p>安装教程参考  <a href="https://blog.csdn.net/qq_39377418/article/details/95199800" target="_blank" rel="noopener">https://blog.csdn.net/qq_39377418/article/details/95199800</a>  讲的非常详细。</p>
+</li>
+<li><p>安装完毕后Windows通过打开cmd控制台输入git会出现如下所示表明git安装成功<br><img src="./%E9%80%9A%E8%BF%87hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/git%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png" alt="git安装成功"> </p>
+</li>
+</ol>
 <hr>
-<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>内容</p>
-<hr>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a></p>
+<h2 id="第二步：安装nodejs。官网网址：http-nodejs-cn-下载自己系统的对应版本，安装一直下一步。"><a href="#第二步：安装nodejs。官网网址：http-nodejs-cn-下载自己系统的对应版本，安装一直下一步。" class="headerlink" title="第二步：安装nodejs。官网网址：http://nodejs.cn/ 下载自己系统的对应版本，安装一直下一步。"></a>第二步：安装nodejs。官网网址：<a href="http://nodejs.cn/" target="_blank" rel="noopener">http://nodejs.cn/</a> 下载自己系统的对应版本，安装一直下一步。</h2><h3 id="安装成功cmd中输入node-v会出现如下提示就说明安装成功（每个人版本不同）。"><a href="#安装成功cmd中输入node-v会出现如下提示就说明安装成功（每个人版本不同）。" class="headerlink" title="安装成功cmd中输入node -v会出现如下提示就说明安装成功（每个人版本不同）。"></a>安装成功cmd中输入node -v会出现如下提示就说明安装成功（每个人版本不同）。</h3><p><img src="./%E9%80%9A%E8%BF%87hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/nodejs%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png" alt="nodejs安装成功"></p>
 
       
 
@@ -258,7 +267,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/08/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/09/%E9%80%9A%E8%BF%87hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -272,18 +281,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/07/09/%E9%80%9A%E8%BF%87hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          通过hexo搭建自己的第一个博客
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/07/08/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2020/07/08/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的第一篇博客文章</div>
       <i class="icon-circle-right"></i>
     </a>
   
