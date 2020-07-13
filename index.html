@@ -151,6 +151,89 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-使用instanceof后为何要向下强转" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/13/%E4%BD%BF%E7%94%A8instanceof%E5%90%8E%E4%B8%BA%E4%BD%95%E8%A6%81%E5%90%91%E4%B8%8B%E5%BC%BA%E8%BD%AC/">使用instanceof后为何要向下强转</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/13/%E4%BD%BF%E7%94%A8instanceof%E5%90%8E%E4%B8%BA%E4%BD%95%E8%A6%81%E5%90%91%E4%B8%8B%E5%BC%BA%E8%BD%AC/" class="archive-article-date">
+  	<time datetime="2020-07-13T08:19:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="使用instanceof时基本都使用了多态的方式创建对象"><a href="#使用instanceof时基本都使用了多态的方式创建对象" class="headerlink" title="使用instanceof时基本都使用了多态的方式创建对象"></a>使用instanceof时基本都使用了多态的方式创建对象</h1><h3 id="1-instanceof的作用"><a href="#1-instanceof的作用" class="headerlink" title="1.instanceof的作用"></a>1.instanceof的作用</h3><p>instanceof使用的语句：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(A instanceof B)</span><br></pre></td></tr></table></figure>
+
+<p>判断对象A是不是B的实例<br>这个判断之后并没有必要使用instanceof这个语句，但一般情况我们使用instanceof是下面的情况中：</p>
+<h3 id="2-Person-person-Person-o-的作用"><a href="#2-Person-person-Person-o-的作用" class="headerlink" title="2. Person person = (Person)o;的作用"></a>2. Person person = (Person)o;的作用</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test1</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Person person = <span class="keyword">new</span> Person(<span class="string">"Jack"</span>,<span class="number">45</span>);</span><br><span class="line">        Person person1 = <span class="keyword">new</span> Person(<span class="string">"Laownag"</span>,<span class="number">47</span>);</span><br><span class="line"></span><br><span class="line">        System.out.println(person.compareTo(person1));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> <span class="keyword">implements</span> <span class="title">Comparable</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String name, <span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(Object o)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (o <span class="keyword">instanceof</span> Person) &#123; <span class="comment">//判断o是否时Person的实例</span></span><br><span class="line">            Person person = (Person)o;<span class="comment">//向下强转</span></span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.name.compareTo(person.name);</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"输入的类型不匹配"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>在@override中定义的参数类型时<code>Object o</code>,这是一个最大的父类，这样定义的目的是我们自己的所有类的类型都是Object的子类，通过Java的多态，我们自己定义的所有类的对象都可以传进来。</p>
+</li>
+<li><p>比对之后确定o是Person类的实例，但是由于o是Object类型的对象，不能调用Person类的所有方法属性，所以要向下转型，即</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Person person &#x3D; (Person)o;</span><br></pre></td></tr></table></figure>
+
+<p>通过这一步之后将<code>o</code>所指向的地址值传给<code>person</code>对象。由于<code>person</code>对象是Person类的实例，所以可以调用Person类的所有方法。</p>
+<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(Object o)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (o <span class="keyword">instanceof</span> Person) &#123; <span class="comment">//判断o是否时Person的实例</span></span><br><span class="line">        Person person = (Person)o;<span class="comment">//向下强转</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.name.compareTo(person.name);</span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"输入的类型不匹配"</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>形参是一个Object类的对象</li>
+<li>需要判读传给o的实参是不是属于Person类</li>
+<li>o是Object类，不能调用Person类的方法，需要向下转型到Person类</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/13/%E4%BD%BF%E7%94%A8instanceof%E5%90%8E%E4%B8%BA%E4%BD%95%E8%A6%81%E5%90%91%E4%B8%8B%E5%BC%BA%E8%BD%AC/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-阅读论文的方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
