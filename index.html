@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next gemini use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -81,9 +81,9 @@
 
 <meta name="description" content="重庆邮电大学2019级硕士生         热情的学习者； 狂热的数码迷">
 <meta property="og:type" content="website">
-<meta property="og:title" content="张震坤&#39;s博客">
+<meta property="og:title" content="张震坤·博客">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="张震坤&#39;s博客">
+<meta property="og:site_name" content="张震坤·博客">
 <meta property="og:description" content="重庆邮电大学2019级硕士生         热情的学习者； 狂热的数码迷">
 <meta property="article:author" content="张震坤">
 <meta property="article:tag" content="前端，机器学习，程序猿，极客，编程，开源，分享">
@@ -95,7 +95,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
+    scheme: 'Gemini',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -123,7 +123,7 @@
 
 
 
-  <title>张震坤's博客</title>
+  <title>张震坤·博客</title>
   
 
 
@@ -154,7 +154,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">张震坤's博客</span>
+        <span class="site-title">张震坤·博客</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -180,9 +180,9 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/%20" rel="section">
+          <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
             首页
           </a>
@@ -190,9 +190,9 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/%20" rel="section">
+          <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
             标签
           </a>
@@ -200,9 +200,9 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/%20" rel="section">
+          <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
             分类
           </a>
@@ -260,7 +260,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="张震坤's博客">
+      <meta itemprop="name" content="张震坤·博客">
     </span>
 
     
@@ -292,6 +292,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -332,272 +354,17 @@
 
       
         
-          
-            <h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><ul>
+          <h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><ul>
 <li>要将文字在父元素中垂直居中，只需将父元素的line-height设置为一个和父元素height一样大小的值即可<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">height: 25px;</span><br><span class="line">line-height: 25px;</span><br></pre></td></tr></table></figure></li>
 <li>取消超链接的下划线<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">text-decoration: none</span><br></pre></td></tr></table></figure></li>
-<li>设置超链接鼠标移入样式<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">:hover</span><br><span class="line">.list&gt;li&gt;a:hover</span><br></pre></td></tr></table></figure></li>
-<li>文字水平居中显示<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">text-align: center;</span><br></pre></td></tr></table></figure></li>
-<li>设置阴影轮廓</li>
-</ul>
-<p>从左往右分别是：<strong>左右偏移 上下偏移 阴影大小   阴影颜色和透明度</strong>(偏移量：正值往右或者下偏移)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">box-shadow: 20px     20px     40px    rgba(0, 0, 0, 0.3);</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>设置透明效果</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">opacity: 0.5;</span><br></pre></td></tr></table></figure></li>
-<li><p>设置矩形圆角(一个就是圆形的半径大小，两个就是椭圆形半径大小)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border-radius: 30px&#x2F;50px;</span><br></pre></td></tr></table></figure></li>
-<li><p>解决高度塌陷的问题（使用::after伪元素来解决）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.box1::after&#123;</span><br><span class="line">    clear: both;</span><br><span class="line">    content: &quot;&quot;;</span><br><span class="line">    display: block;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>定义一个块元素首行文本内容之前的缩进量，方便搜索引擎找到</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">text-indent</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>解决高度塌陷和外边距重叠的最佳方法</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.clearfix::before,</span><br><span class="line">.clearfix::after&#123;</span><br><span class="line">    content: &quot;&quot;;</span><br><span class="line">    display: table; &#x2F;&#x2F;table既可以解决高度塌陷也可以解决外边距重叠</span><br><span class="line">    clear: both; &#x2F;&#x2F;清除float的影响</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="定位（布局等式：left-margin-left-width-margin-right-right-包含块宽度）"><a href="#定位（布局等式：left-margin-left-width-margin-right-right-包含块宽度）" class="headerlink" title="定位（布局等式：left + margin-left + width + margin-right + right = 包含块宽度）"></a>定位（布局等式：left + margin-left + width + margin-right + right = 包含块宽度）</h2></li>
-<li><p><strong>相对定位</strong>：当元素的position属性值设置为relative时则开启了元素的相对定位（<strong>相对于自己最初的位置移动</strong>）</p>
-<ul>
-<li>相对定位的特点：</li>
-</ul>
-</li>
-</ul>
-<ol>
-<li>元素开启相对定位以后，如果不设置偏移量元素不会发生任何的变化</li>
-<li>相对定位是参照于元素在文档流中的位置进行定位的</li>
-<li>相对定位会提升元素的层级</li>
-<li>相对定位不会使元素脱离文档流</li>
-<li>相对定位不会改变元素的性质块还是块，行内还是行内 </li>
-</ol>
-<ul>
-<li><strong>绝对定位</strong>：当元素的position属性值设置为absolute时，则开启了元素的绝对定位（<strong>根据包含块的位置相对移动</strong>）<ul>
-<li>绝对定位的特点：</li>
-</ul>
-</li>
-</ul>
-<ol>
-<li>开启绝对定位后，如果不设置偏移量元素的位置不会发生变化</li>
-<li>开启绝对定位后，元素会从文档流中脱离</li>
-<li>绝对定位会改变元素的性质，行内变成块，块的宽高被内容撑开</li>
-<li>绝对定位会使元素提升一个层级</li>
-<li>绝对定位元素是相对于其包含块进行定位的<ul>
-<li>绝对定位的包含块:包含块就是离它最近的开启了定位的祖先元素，如果所有的祖先元素都没有开启定位则根元素就是它的包含块</li>
-<li>html（根元素、初始包含块）</li>
-</ul>
-</li>
-</ol>
-<ul>
-<li>图标字体</li>
-</ul>
-<p>图标字体（iconfont）<br>            - 在网页中经常需要使用一些图标，可以通过图片来引入图标<br>                但是图片大小本身比较大，并且非常的不灵活<br>            - 所以在使用图标时，我们还可以将图标直接设置为字体，<br>                然后通过font-face的形式来对字体进行引入<br>            - 这样我们就可以通过使用字体的形式来使用图标</p>
-<pre><code>fontawesome 使用步骤
-    1.下载 https://fontawesome.com/
-    2.解压
-    3.将css和webfonts移动到项目中
-    4.将all.css引入到网页中
-    5.使用图标字体
-        - 直接通过类名来使用图标字体
-            class=&quot;fas fa-bell&quot;
-            class=&quot;fab fa-accessible-icon&quot;</code></pre><ul>
-<li>引入图标字体<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">li::before&#123;</span><br><span class="line">    &#x2F;* </span><br><span class="line">    通过伪元素来设置图标字体</span><br><span class="line">        1.找到要设置图标的元素通过before或after选中</span><br><span class="line">        2.在content中设置字体的编码</span><br><span class="line">        3.设置字体的样式</span><br><span class="line">            fab</span><br><span class="line">            font-family: &#39;Font Awesome 5 Brands&#39;;</span><br><span class="line"></span><br><span class="line">            fas</span><br><span class="line">            font-family: &#39;Font Awesome 5 Free&#39;;</span><br><span class="line">            font-weight: 900; </span><br><span class="line"></span><br><span class="line">    *&#x2F;</span><br><span class="line">        content: &#39;\f1b0&#39;;</span><br><span class="line">        &#x2F;* font-family: &#39;Font Awesome 5 Brands&#39;; *&#x2F;</span><br><span class="line">        font-family: &#39;Font Awesome 5 Free&#39;;</span><br><span class="line">        font-weight: 900; </span><br><span class="line">        color: blue;</span><br><span class="line">        margin-right: 10px;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-通过实体来使用图标字体：</li>
-</ul>
-<p><strong>&#x;</strong> 图标的编码;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;span class&#x3D;&quot;fas&quot;&gt;&amp;#xf0f3;&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="文本样式"><a href="#文本样式" class="headerlink" title="文本样式"></a>文本样式</h2><ul>
-<li><p>text-decoration 设置文本修饰</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">可选值：</span><br><span class="line">    none 什么都没有</span><br><span class="line">    underline 下划线</span><br><span class="line">    line-through 删除线</span><br><span class="line">    overline 上划线</span><br><span class="line"></span><br><span class="line">    &#x2F;* text-decoration: overline; *&#x2F;</span><br><span class="line"></span><br><span class="line">    &#x2F;* text-decoration: underline red dotted; *&#x2F;</span><br></pre></td></tr></table></figure></li>
-<li><p>设置省略符号</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">width: 200px;</span><br><span class="line">&#x2F;* </span><br><span class="line">    white-space 设置网页如何处理空白</span><br><span class="line">        可选值：</span><br><span class="line">            normal 正常</span><br><span class="line">            nowrap 不换行</span><br><span class="line">            pre 保留空白</span><br><span class="line"></span><br><span class="line">*&#x2F;</span><br><span class="line">white-space: nowrap;</span><br><span class="line">overflow: hidden;</span><br><span class="line">text-overflow: ellipsis;</span><br></pre></td></tr></table></figure></li>
-<li><p>文字对齐方式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">text-align 文本的水平对齐</span><br><span class="line">    可选值：</span><br><span class="line">        left 左侧对齐</span><br><span class="line">        right 右对齐</span><br><span class="line">        center 居中对齐</span><br><span class="line">        justify 两端对齐</span><br><span class="line"></span><br><span class="line">vertical-align 文字垂直对齐</span><br></pre></td></tr></table></figure>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2></li>
-<li><p>background-image 设置背景图片 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">可以同时设置背景图片和背景颜色，这样背景颜色将会成为图片的背景色</span><br><span class="line">如果背景的图片小于元素，则背景图片会自动在元素中平铺将元素铺满</span><br><span class="line">如果背景的图片大于元素，将会一个部分背景无法完全显示</span><br><span class="line">如果背景图片和元素一样大，则会直接正常显示</span><br></pre></td></tr></table></figure></li>
-<li><p>background-repeat 用来设置背景的重复方式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">可选值：</span><br><span class="line">repeat 默认值 ， 背景会沿着x轴 y轴双方向重复</span><br><span class="line">repeat-x 沿着x轴方向重复</span><br><span class="line">repeat-y 沿着y轴方向重复</span><br><span class="line">no-repeat 背景图片不重复</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>background-position 用来设置背景图片的位置 <strong>（要将图片移到最左侧显示，右边则表示负数）</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">设置方式：</span><br><span class="line">通过 top left right bottom center 几个表示方位的词来设置背景图片的位置</span><br><span class="line">使用方位词时必须要同时指定两个值，如果只写一个则第二个默认就是center</span><br><span class="line"></span><br><span class="line">通过偏移量来指定背景图片的位置：</span><br><span class="line">    水平方向的偏移量 </span><br><span class="line">    垂直方向变量</span><br></pre></td></tr></table></figure></li>
-<li><p>设置背景的范围 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">background-clip </span><br><span class="line">可选值：</span><br><span class="line">    border-box 默认值，背景会出现在边框的下边</span><br><span class="line">    padding-box 背景不会出现在边框，只出现在内容区和内边距</span><br><span class="line">    content-box 背景只会出现在内容区</span><br><span class="line"></span><br><span class="line">background-origin 背景图片的偏移量计算的原点</span><br><span class="line">    padding-box 默认值，background-position从内边距处开始计算</span><br><span class="line">    content-box 背景图片的偏移量从内容区处计算</span><br><span class="line">    border-box 背景图片的变量从边框处开始计算</span><br></pre></td></tr></table></figure></li>
-<li><p>background-size 设置背景图片的大小</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">第一个值表示宽度 </span><br><span class="line">第二个值表示高度</span><br><span class="line">- 如果只写一个，则第二个值默认是 auto</span><br><span class="line"></span><br><span class="line">cover 图片的比例不变，将元素铺满</span><br><span class="line">contain 图片比例不变，将图片在元素中完整显示</span><br></pre></td></tr></table></figure></li>
-<li><p>背景所有样式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">background-color</span><br><span class="line">background-image</span><br><span class="line">background-repeat</span><br><span class="line">background-position</span><br><span class="line">background-size</span><br><span class="line">background-origin</span><br><span class="line">background-clip</span><br><span class="line">background-attachment</span><br><span class="line"></span><br><span class="line">- backgound 背景相关的简写属性，所有背景相关的样式都可以通过该样式来设置</span><br><span class="line">    并且该样式没有顺序要求，也没有哪个属性是必须写的</span><br><span class="line"></span><br><span class="line">    注意：</span><br><span class="line">        background-size必须写在background-position的后边，并且使用&#x2F;隔开</span><br><span class="line">            background-position&#x2F;background-size</span><br><span class="line"></span><br><span class="line">        background-origin background-clip 两个样式 ，orgin要在clip的前边</span><br></pre></td></tr></table></figure></li>
-<li><p>background-attachment</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- 背景图片是否跟随元素移动</span><br><span class="line">- 可选值：</span><br><span class="line">    scroll 默认值 背景图片会跟随元素移动</span><br><span class="line">    fixed 背景会固定在页面中，不会随元素移动</span><br></pre></td></tr></table></figure></li>
-<li><p>超链接的各种状态</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a:link &#123;color: #FF0000&#125;     &#x2F;* 未访问的链接 *&#x2F;</span><br><span class="line">a:visited &#123;color: #00FF00&#125;  &#x2F;* 已访问的链接 *&#x2F;</span><br><span class="line">a:hover &#123;color: #FF00FF&#125;    &#x2F;* 当有鼠标悬停在链接上 *&#x2F;</span><br><span class="line">a:active &#123;color: #0000FF&#125;   &#x2F;* 被选择的链接 *&#x2F;</span><br></pre></td></tr></table></figure></li>
-<li><p>是否显示元素的背面</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">backface-visibility: hidden;</span><br></pre></td></tr></table></figure>
-<h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2></li>
-<li><p>动画:动画和过渡类似，都是可以实现一些动态的效果，不同的是过渡需要在某个属性发生变化时才会触发动画可以自动触发动态效果</p>
-</li>
-</ul>
-<ol>
-<li>设置关键帧<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@keyframes test &#123;</span><br><span class="line">    &#x2F;* 关键帧设置了动画执行每一个步骤 *&#x2F;</span><br><span class="line">    &#x2F;* from表示动画的开始位置 也可以使用 0% *&#x2F;</span><br><span class="line">    from&#123;</span><br><span class="line">        margin-left: 0;</span><br><span class="line">        background-color: orange;</span><br><span class="line">    &#125; </span><br><span class="line"></span><br><span class="line">    &#x2F;* to动画的结束位置 也可以使用100%*&#x2F;</span><br><span class="line">    to&#123;</span><br><span class="line">        background-color: red;</span><br><span class="line">        margin-left: 700px;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>设置动画</li>
-</ol>
-<p><strong>animation: name duration timing-function delay iteration-count direction fill-mode;</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">animation-name: 要对当前元素生效的关键帧的名字 </span><br><span class="line">animation-name: test;</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>动画的执行时间<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">animation-duration: 动画的执行时间 </span><br><span class="line">animation-duration: 4s;</span><br></pre></td></tr></table></figure></li>
-<li>动画的延时<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">animation-delay: 2s;动画的延时</span><br></pre></td></tr></table></figure></li>
-<li>过渡的时序函数<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">transition-timing-function: 过渡的时序函数</span><br><span class="line">可选值：</span><br><span class="line">    ease 默认值，慢速开始，先加速，再减速</span><br><span class="line">    linear 匀速运动</span><br><span class="line">    ease-in 加速运动</span><br><span class="line">    ease-out 减速运动</span><br><span class="line">    ease-in-out 先加速 后减速</span><br><span class="line">    cubic-bezier() 来指定时序函数</span><br><span class="line">        https:&#x2F;&#x2F;cubic-bezier.com</span><br><span class="line"></span><br><span class="line">    steps() 分步执行过渡效果</span><br><span class="line">        可以设置一个第二个值：</span><br><span class="line">            end ， 在时间结束时执行过渡(默认值)</span><br><span class="line">            start ， 在时间开始时执行过渡</span><br><span class="line">transition-timing-function: cubic-bezier(.24,.95,.82,-0.88);</span><br><span class="line">transition-timing-function: steps(2, start);</span><br></pre></td></tr></table></figure></li>
-<li>动画执行的次数 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">animation-iteration-count 动画执行的次数 </span><br><span class="line">可选值：</span><br><span class="line">    次数</span><br><span class="line">    infinite 无限执行</span><br><span class="line">animation-iteration-count: 1;</span><br></pre></td></tr></table></figure></li>
-<li>指定动画运行的方向<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">animation-direction</span><br><span class="line">指定动画运行的方向:animation-direction: alternate-reverse;</span><br><span class="line">    可选值：</span><br><span class="line">    normal 默认值  从 from 向 to运行 每次都是这样 </span><br><span class="line">    reverse 从 to 向 from 运行 每次都是这样 </span><br><span class="line">    alternate 从 from 向 to运行 重复执行动画时反向执行</span><br><span class="line">    alternate-reverse 从 to 向 from运行 重复执行动画时反向执行</span><br></pre></td></tr></table></figure></li>
-<li>设置动画的执行状态 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">animation-play-state: 设置动画的执行状态 </span><br><span class="line">可选值：</span><br><span class="line">    running 默认值 动画执行</span><br><span class="line">    paused 动画暂停</span><br><span class="line">animation-play-state: paused;</span><br></pre></td></tr></table></figure></li>
-<li>动画的填充模式<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">animation-fill-mode: 动画的填充模式</span><br><span class="line">    可选值：</span><br><span class="line">        none 默认值 动画执行完毕元素回到原来位置</span><br><span class="line">        forwards 动画执行完毕元素会停止在动画结束的位置</span><br><span class="line">        backwards 动画延时等待时，元素就会处于开始位置</span><br><span class="line">        both 结合了forwards 和 backwards</span><br><span class="line">animation-fill-mode: both;</span><br></pre></td></tr></table></figure></li>
-<li>animation：<strong>动画执行时间一定要在延迟时间前面</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">animation: name duration timing-function delay iteration-count direction fill-mode;</span><br></pre></td></tr></table></figure>
-<h2 id="过渡"><a href="#过渡" class="headerlink" title="过渡"></a>过渡</h2></li>
-</ol>
-<ul>
-<li>过渡（transition）<ul>
-<li>通过过渡可以指定一个属性发生变化时的切换方式</li>
-<li>通过过渡可以创建一些非常好的效果，提升用户的体验 </li>
-</ul>
-</li>
-</ul>
-<ol>
-<li>transition-property: 指定要执行过渡的属性  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">transition-property: height , width;</span><br><span class="line">transition-property: all; </span><br><span class="line">多个属性间使用,隔开 </span><br><span class="line">如果所有属性都需要过渡，则使用all关键字</span><br><span class="line">大部分属性都支持过渡效果，注意过渡时必须是从一个有效数值向另外一个有效数值进行过渡</span><br></pre></td></tr></table></figure></li>
-<li>transition-duration: 指定过渡效果的持续时间             <pre><code>时间单位：s 和 ms  1s = 1000ms</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">transition-duration: 100ms, 2s;</span><br><span class="line">transition-duration: 2s;</span><br></pre></td></tr></table></figure></li>
-<li>transition-timing-function: 过渡的时序函数<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">指定过渡的执行的方式  </span><br><span class="line">可选值：</span><br><span class="line">    ease 默认值，慢速开始，先加速，再减速</span><br><span class="line">    linear 匀速运动</span><br><span class="line">    ease-in 加速运动</span><br><span class="line">    ease-out 减速运动</span><br><span class="line">    ease-in-out 先加速 后减速</span><br><span class="line">    cubic-bezier() 来指定时序函数</span><br><span class="line">        https:&#x2F;&#x2F;cubic-bezier.com</span><br><span class="line">    steps() 分步执行过渡效果</span><br><span class="line">        可以设置一个第二个值：</span><br><span class="line">            end ， 在时间结束时执行过渡(默认值)</span><br><span class="line">            start ， 在时间开始时执行过渡</span><br><span class="line">    transition-timing-function: cubic-bezier(.24,.95,.82,-0.88);</span><br><span class="line">    transition-timing-function: steps(2, start);</span><br></pre></td></tr></table></figure></li>
-<li>transition-delay: 过渡效果的延迟，等待一段时间后在执行过渡<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transition-delay: 2s;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h2 id="变形"><a href="#变形" class="headerlink" title="变形"></a>变形</h2><ol>
-<li>设置3D展示<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transform-style: preserve-3d;</span><br></pre></td></tr></table></figure></li>
-<li>变形就是指通过CSS来改变元素的形状或位置</li>
-</ol>
-<ul>
-<li>变形不会影响到页面的布局<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- transform 用来设置元素的变形效果</span><br><span class="line">    - 平移：</span><br><span class="line">        translateX() 沿着x轴方向平移</span><br><span class="line">        translateY() 沿着y轴方向平移</span><br><span class="line">        translateZ() 沿着z轴方向平移</span><br><span class="line">            - 平移元素，百分比是相对于自身计算的</span><br></pre></td></tr></table></figure></li>
-</ul>
-<ol start="3">
-<li>Z轴平移</li>
-</ol>
-<ul>
-<li>设置当前网页的视距为800px，人眼距离网页的距离 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">perspective:800px;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>z轴平移，调整元素在z轴的位置，正常情况就是调整元素和人眼之间的距离，<br>  距离越大，元素离人越近</li>
-<li>z轴平移属于立体效果（近大远小），默认情况下网页是不支持透视，如果需要看见效果<br>  必须要设置网页的视距</li>
-</ul>
-</li>
-</ul>
-<ol start="4">
-<li>旋转<br>通过旋转可以使元素沿着x y 或 z旋转指定的角度<br> rotateX()<br> rotateY()<br> rotateZ()<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">transform: rotateZ(.25turn);</span><br><span class="line">transform: rotateY(180deg) translateZ(400px);</span><br><span class="line">transform: translateZ(400px) rotateY(180deg) ;</span><br></pre></td></tr></table></figure></li>
-<li>缩放<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">对元素进行缩放的函数：</span><br><span class="line">    scaleX() 水平方向缩放</span><br><span class="line">    scaleY() 垂直方向缩放</span><br><span class="line">    scale() 双方向的缩放</span><br></pre></td></tr></table></figure></li>
-<li>变形的原点 默认值 center<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transform-origin:20px 20px;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h2 id="flex-弹性盒、伸缩盒"><a href="#flex-弹性盒、伸缩盒" class="headerlink" title="flex(弹性盒、伸缩盒)"></a>flex(弹性盒、伸缩盒)</h2><ul>
-<li><p>弹性容器</p>
-<ul>
-<li>要使用弹性盒，必须先将一个元素设置为弹性容器</li>
-<li>我们通过 display 来设置弹性容器<br>  display:flex  设置为块级弹性容器<br>  display:inline-flex 设置为行内的弹性容器</li>
-</ul>
-</li>
-<li><p>弹性元素</p>
-<ul>
-<li>弹性容器的子元素是弹性元素（弹性项）</li>
-<li>弹性元素可以同时是弹性容器</li>
-</ul>
-</li>
-</ul>
-<ol>
-<li>flex-grow 指定弹性元素的<strong>伸展</strong>的系数</li>
-</ol>
-<ul>
-<li>表示当父元素有多余空间的时，子元素如何伸展<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flex-grow: 1;父元素的剩余空间，会按照比例进行分配</span><br></pre></td></tr></table></figure></li>
-</ul>
-<ol start="2">
-<li>flex-shrink 指定弹性元素的<strong>收缩</strong>系数</li>
-</ol>
-<ul>
-<li>当父元素中的空间不足以容纳所有的子元素时，如果对子元素进行收缩<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flex-shrink: 1;按照比例进行收缩</span><br></pre></td></tr></table></figure></li>
-</ul>
-<ol start="3">
-<li>flex-direction 指定容器中弹性元素的排列方式</li>
-</ol>
-<ul>
-<li><p>可选值：</p>
-<ul>
-<li>row 默认值，弹性元素在容器中水平排列（左向右）<ul>
-<li>主轴 自左向右</li>
-</ul>
-</li>
-<li>row-reverse 弹性元素在容器中反向水平排列（右向左）<ul>
-<li>主轴 自右向左</li>
-</ul>
-</li>
-<li>column 弹性元素纵向排列（自上向下）</li>
-<li>column-reverse 弹性元素方向纵向排列（自下向上）</li>
-</ul>
-</li>
-<li><p>主轴：<br>  弹性元素的排列方向称为主轴</p>
-</li>
-<li><p>侧轴：<br>  与主轴垂直方向的称为侧轴</p>
-</li>
-</ul>
-<ol start="4">
-<li>flex-wrap:设置弹性元素是否在弹性容器中自动换行</li>
-</ol>
-<ul>
-<li>可选值：<ul>
-<li>nowrap 默认值，元素不会自动换行</li>
-<li>wrap 元素沿着辅轴方向自动换行</li>
-<li>wrap-reverse 元素沿着辅轴反方向换行</li>
-</ul>
-</li>
-</ul>
-<ol start="5">
-<li><strong>flex-flow:  wrap 和 direction 的简写属性</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flex-flow: row wrap; 同时设置wrap 和 direction不区分顺序</span><br></pre></td></tr></table></figure></li>
-<li>justify-content：<strong>(justify代表主轴)</strong> 如何分配主轴上的空白空间（主轴上的元素如何排列）</li>
-</ol>
-<ul>
-<li>可选值：<ul>
-<li>flex-start 元素沿着主轴起边排列</li>
-<li>flex-end 元素沿着主轴终边排列</li>
-<li>center 元素居中排列</li>
-<li>space-around 空白分布到元素两侧</li>
-<li>space-between 空白均匀分布到元素间</li>
-<li>space-evenly  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">justify-content: center;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ul>
-<ol start="7">
-<li>align-items:<strong>(align代表侧轴)</strong> 元素在辅轴上如何对齐,元素间的关系</li>
-</ol>
-<ul>
-<li>可选值：<ul>
-<li>stretch 默认值，将元素的长度设置为相同的值</li>
-<li>flex-start 元素不会拉伸，沿着辅轴起边对齐</li>
-<li>flex-end 沿着辅轴的终边对齐</li>
-<li>center 居中对齐</li>
-<li>baseline 基线对齐<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">align-items: flex-start;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<ol start="8">
-<li>align-content: 辅轴空白空间的分布<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">align-content: space-between;</span><br></pre></td></tr></table></figure></li>
-<li>align-self: 用来覆盖当前弹性元素上的align-items<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">align-self: stretch;</span><br></pre></td></tr></table></figure></li>
-<li>flex-basis 指定的是元素在主轴上的基础长度</li>
-</ol>
-<ul>
-<li>如果主轴是 横向的 则 该值指定的就是元素的宽度</li>
-<li>如果主轴是 纵向的 则 该值指定的是就是元素的高度</li>
-<li>默认值是 auto，表示参考元素自身的高度或宽度</li>
-<li>如果传递了一个具体的数值，则以该值为准</li>
-</ul>
-<ol start="11">
-<li>flex 可以设置弹性元素所有的三个样式<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">flex 增长 缩减 基础;</span><br><span class="line">flex: initial;</span><br><span class="line">    initial &quot;flex: 0 1 auto&quot;.</span><br><span class="line">    auto  &quot;flex: 1 1 auto&quot;</span><br><span class="line">    none &quot;flex: 0 0 auto&quot; 弹性元素没有弹性</span><br></pre></td></tr></table></figure></li>
-<li>order 决定弹性元素的排列顺序<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">order: 2;</span><br></pre></td></tr></table></figure></li>
-<li>flex: none; 设置弹性盒不产生形变</li>
-</ol>
-
-          
+<li>设置超链接鼠标移入样式<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">:hover</span><br><span class="line">.list&gt;li&gt;a:hover</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/12/20/CSS%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -653,7 +420,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="张震坤's博客">
+      <meta itemprop="name" content="张震坤·博客">
     </span>
 
     
@@ -685,6 +452,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JAVA/" itemprop="url" rel="index">
+                    <span itemprop="name">JAVA</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -725,30 +514,17 @@
 
       
         
-          
-            <h1 id="使用instanceof时基本都使用了多态的方式创建对象"><a href="#使用instanceof时基本都使用了多态的方式创建对象" class="headerlink" title="使用instanceof时基本都使用了多态的方式创建对象"></a>使用instanceof时基本都使用了多态的方式创建对象</h1><h3 id="1-instanceof的作用"><a href="#1-instanceof的作用" class="headerlink" title="1.instanceof的作用"></a>1.instanceof的作用</h3><p>instanceof使用的语句：</p>
+          <h1 id="使用instanceof时基本都使用了多态的方式创建对象"><a href="#使用instanceof时基本都使用了多态的方式创建对象" class="headerlink" title="使用instanceof时基本都使用了多态的方式创建对象"></a>使用instanceof时基本都使用了多态的方式创建对象</h1><h3 id="1-instanceof的作用"><a href="#1-instanceof的作用" class="headerlink" title="1.instanceof的作用"></a>1.instanceof的作用</h3><p>instanceof使用的语句：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(A instanceof B)</span><br></pre></td></tr></table></figure>
 
 <p>判断对象A是不是B的实例<br>这个判断之后并没有必要使用instanceof这个语句，但一般情况我们使用instanceof是下面的情况中：</p>
-<h3 id="2-Person-person-Person-o-的作用"><a href="#2-Person-person-Person-o-的作用" class="headerlink" title="2. Person person = (Person)o;的作用"></a>2. Person person = (Person)o;的作用</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test1</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Person person = <span class="keyword">new</span> Person(<span class="string">"Jack"</span>,<span class="number">45</span>);</span><br><span class="line">        Person person1 = <span class="keyword">new</span> Person(<span class="string">"Laownag"</span>,<span class="number">47</span>);</span><br><span class="line"></span><br><span class="line">        System.out.println(person.compareTo(person1));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> <span class="keyword">implements</span> <span class="title">Comparable</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String name, <span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(Object o)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (o <span class="keyword">instanceof</span> Person) &#123; <span class="comment">//判断o是否时Person的实例</span></span><br><span class="line">            Person person = (Person)o;<span class="comment">//向下强转</span></span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.name.compareTo(person.name);</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"输入的类型不匹配"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>在@override中定义的参数类型时<code>Object o</code>,这是一个最大的父类，这样定义的目的是我们自己的所有类的类型都是Object的子类，通过Java的多态，我们自己定义的所有类的对象都可以传进来。</p>
-</li>
-<li><p>比对之后确定o是Person类的实例，但是由于o是Object类型的对象，不能调用Person类的所有方法属性，所以要向下转型，即</p>
-</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Person person &#x3D; (Person)o;</span><br></pre></td></tr></table></figure>
-
-<p>通过这一步之后将<code>o</code>所指向的地址值传给<code>person</code>对象。由于<code>person</code>对象是Person类的实例，所以可以调用Person类的所有方法。</p>
-<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(Object o)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (o <span class="keyword">instanceof</span> Person) &#123; <span class="comment">//判断o是否时Person的实例</span></span><br><span class="line">        Person person = (Person)o;<span class="comment">//向下强转</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.name.compareTo(person.name);</span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"输入的类型不匹配"</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>形参是一个Object类的对象</li>
-<li>需要判读传给o的实参是不是属于Person类</li>
-<li>o是Object类，不能调用Person类的方法，需要向下转型到Person类</li>
-</ol>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/07/13/%E4%BD%BF%E7%94%A8instanceof%E5%90%8E%E4%B8%BA%E4%BD%95%E8%A6%81%E5%90%91%E4%B8%8B%E5%BC%BA%E8%BD%AC/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -804,7 +580,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="张震坤's博客">
+      <meta itemprop="name" content="张震坤·博客">
     </span>
 
     
@@ -836,6 +612,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -876,8 +674,7 @@
 
       
         
-          
-            <h1 id="如何高效阅读机器学习顶会论文"><a href="#如何高效阅读机器学习顶会论文" class="headerlink" title="如何高效阅读机器学习顶会论文"></a>如何高效阅读机器学习顶会论文</h1><h3 id="1-读书与读论文的区别"><a href="#1-读书与读论文的区别" class="headerlink" title="1.读书与读论文的区别"></a>1.读书与读论文的区别</h3><p><strong>教材仔细读：</strong>经过长时间的打磨，是精品；书籍如CSAPP, ESL, MLAPP, GEB（最后这个花费作者一辈子心血）</p>
+          <h1 id="如何高效阅读机器学习顶会论文"><a href="#如何高效阅读机器学习顶会论文" class="headerlink" title="如何高效阅读机器学习顶会论文"></a>如何高效阅读机器学习顶会论文</h1><h3 id="1-读书与读论文的区别"><a href="#1-读书与读论文的区别" class="headerlink" title="1.读书与读论文的区别"></a>1.读书与读论文的区别</h3><p><strong>教材仔细读：</strong>经过长时间的打磨，是精品；书籍如CSAPP, ESL, MLAPP, GEB（最后这个花费作者一辈子心血）</p>
 <p><strong>论文要甄别：</strong></p>
 <ul>
 <li>顶会论文：cvpr, icml, nips, 等</li>
@@ -891,45 +688,13 @@
 <p>⚠️：只有一小部分的文章值得复现，如顶会论文的best paper 或 oral；</p>
 <p>⚠️：经典的论文在你之前可能已经有很多人复现过了，作者也可能会给出官方的代码；</p>
 <p>⚠️：硕士、高年级的本科生、刚入门者这些垃圾可以不用读；但博士生为了在这个特别小的方向上能有所建树、保持敏锐的嗅觉，这些垃圾也要读，宁滥勿缺。</p>
-<h3 id="2-论文来源"><a href="#2-论文来源" class="headerlink" title="2. 论文来源"></a>2. 论文来源</h3><p>第一类：一手来源</p>
-<ul>
-<li>会议的官网：cvpr、iccv、eccv、icml、nips（看best paper &amp; oral &amp; 获奖论文）</li>
-<li>arxiv.org (放着未发表的或者预览版的论文)，需要一个账号</li>
-<li>Google scholar;订阅功能 （自然语言处理、auto ml），订阅搜索结果，每日会自动搜索，关注最新论文</li>
-</ul>
-<p>第二类：二手来源</p>
-<ul>
-<li>野生收集：如github上的awesome list，可以订阅watch、star</li>
-<li>可靠信息筛选：公开课（cs224n, cs224w, cs231n, 李宏毅老师机器学习公开课）的幻灯片里有论文列表一定要好好读；被人认可的个人来源、知乎大v、微博；项目源码的注释中的论文</li>
-</ul>
-<p>第三类：三手来源</p>
-<ul>
-<li>综述性论文</li>
-</ul>
-<h3 id="3-如何读论文"><a href="#3-如何读论文" class="headerlink" title="3. 如何读论文"></a>3. 如何读论文</h3><p>场景：刚开完会议或正在开，手中有一次会议上所有被接收的论文或者随意按顺序拿出20篇</p>
-<ul>
-<li><strong>对20篇论文进行简单分类：</strong> 整理、分三类记录</li>
-<li><ul>
-<li><span style='color:red'>1.论文标题和作者</span></li>
-<li><span style='color:red'>2.文章摘要</span>（用自己的话复述，用一句话或50字以内如何向别人推荐和介绍这篇论文，最好用英语；【这篇文章用了什么方法、在干什么】）</li>
-<li><span style='color:red'>3.这篇文章要不要继续精读+当时作出决定的日期</span></li>
-</ul>
-</li>
-<li><strong>精读环节</strong>：带着问题读【把自己想象成一个杠精去挑刺】（你开始提出的问题以及最关心的问题有没有在看完文章后得到解答）* * <strong>精读顺序</strong>：<strong>摘要</strong>（<span style='color:red'>产生问题Q</span>）-&gt; <strong>引言</strong>（上述问题是否被放大、有没有出现新问题、<span style='color:red'>前面的问题有没有得到回答A </span>）-&gt; 再次确认要不要读下去 -&gt; <strong>总结</strong>部分，即conclusion、feature work（作者总结的文章重点以及未来的打算是否明确）-&gt; 知识介绍（重点读每一段的第一句话；<u>如果遇到图表，先仔细的看图表</u>）-&gt; 再次确定要不要继续读 -&gt; 进入最耗时的核心<strong>算法部分</strong> -&gt; <strong>实验部分</strong>（数据集、评价标准）-&gt; 决定要不要<strong>复现</strong>、将自己的实验结果与论文进行比较<ul>
-<li><strong>相关工作</strong>：仔仔细细的看；这个方法是不是在某篇文章的基础上做的、与其他文章有什么关系、借鉴了哪些方法、以及该领域之前是用什么方法、有哪些数据集是被其他人做过实验的、其他人得到了什么效果；<span style='color:red'>【related works】相关文章的题目 + 自己总结这篇文章与其他相关工作的关系或区别。</span></li>
-</ul>
-</li>
-</ul>
-<p>⚠️ 时间：一个半小时；上述红色部分是笔记的记录内容；如果文章对于自己的难度较大，可以暂缓阅读，等把文章中提到的概念、需要的基础知识补一下再回过头来看。</p>
-<p>最后在总结了所有的论文后，<span style='color:red'>再附一张纸：总结多少文章都在关注什么方面的内容，有多少文章在针对某类技术、某个方向，大家都在研究什么。</span></p>
-<p>⚠️ 整个过程中要思考🤔：这个东西有没有价值、为什么大家都在做这些、你对他是什么看法。过几年之后，回过头来，可以看到随着时间研究内容发生的变化。</p>
-<p><strong>将这些样本数据，转化为自己的记忆是非常重要的。</strong></p>
-<h3 id="4-文献管理工具"><a href="#4-文献管理工具" class="headerlink" title="4.文献管理工具"></a>4.文献管理工具</h3><p>Zotero : <a href="https://www.zotero.org/" target="_blank" rel="noopener">https://www.zotero.org/</a> (免费&amp;跨平台)</p>
-<p>Mendeley : <a href="https://www.mendeley.com/" target="_blank" rel="noopener">https://www.mendeley.com/</a> (免费&amp;跨平台)</p>
-<p>Endnote ：<a href="https://www.endnote.com" target="_blank" rel="noopener">https://www.endnote.com</a></p>
-<p>Papers : <a href="https://www.papersapp.com/" target="_blank" rel="noopener">https://www.papersapp.com/</a></p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/07/12/%E9%98%85%E8%AF%BB%E8%AE%BA%E6%96%87%E7%9A%84%E6%96%B9%E6%B3%95/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -985,7 +750,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="张震坤's博客">
+      <meta itemprop="name" content="张震坤·博客">
     </span>
 
     
@@ -1017,6 +782,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="index">
+                    <span itemprop="name">博客</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -1057,84 +844,20 @@
 
       
         
-          
-            <h3 id="这是我第一次尝试写博客，请多多指教。安装博客使用的框架是hexo"><a href="#这是我第一次尝试写博客，请多多指教。安装博客使用的框架是hexo" class="headerlink" title="这是我第一次尝试写博客，请多多指教。安装博客使用的框架是hexo"></a>这是我第一次尝试写博客，请多多指教。安装博客使用的框架是hexo</h3><h2 id="第一步：安装git（后续的一切操作都基于git）"><a href="#第一步：安装git（后续的一切操作都基于git）" class="headerlink" title="第一步：安装git（后续的一切操作都基于git）"></a>第一步：安装git（后续的一切操作都基于git）</h2><ol>
+          <h3 id="这是我第一次尝试写博客，请多多指教。安装博客使用的框架是hexo"><a href="#这是我第一次尝试写博客，请多多指教。安装博客使用的框架是hexo" class="headerlink" title="这是我第一次尝试写博客，请多多指教。安装博客使用的框架是hexo"></a>这是我第一次尝试写博客，请多多指教。安装博客使用的框架是hexo</h3><h2 id="第一步：安装git（后续的一切操作都基于git）"><a href="#第一步：安装git（后续的一切操作都基于git）" class="headerlink" title="第一步：安装git（后续的一切操作都基于git）"></a>第一步：安装git（后续的一切操作都基于git）</h2><ol>
 <li>通过git官网  <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">https://git-scm.com/downloads</a>  下载相应的版本的git，我这里下载的是Windows版本</li>
 <li>安装教程参考  <a href="https://blog.csdn.net/qq_39377418/article/details/95199800" target="_blank" rel="noopener">https://blog.csdn.net/qq_39377418/article/details/95199800</a>  讲的非常详细</li>
 <li>安装完毕后Windows通过打开cmd控制台输入 <code>git</code> 会出现如下所示表明git安装成功<br><img src="/images/%E5%8D%9A%E5%AE%A21/git%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png" alt="git安装成功"> </li>
 </ol>
 <hr>
-<h2 id="第二步：安装nodejs-npm-cnpm-hexo。nodejs官网网址：http-nodejs-cn-下载自己系统的对应版本，安装一直下一步。"><a href="#第二步：安装nodejs-npm-cnpm-hexo。nodejs官网网址：http-nodejs-cn-下载自己系统的对应版本，安装一直下一步。" class="headerlink" title="第二步：安装nodejs/npm/cnpm/hexo。nodejs官网网址：http://nodejs.cn/ 下载自己系统的对应版本，安装一直下一步。"></a>第二步：安装nodejs/npm/cnpm/hexo。nodejs官网网址：<a href="http://nodejs.cn/" target="_blank" rel="noopener">http://nodejs.cn/</a> 下载自己系统的对应版本，安装一直下一步。</h2><ol>
-<li><p>安装成功cmd中输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
-<p>会出现如下提示就说明安装成功（每个人版本不同）<br><img src="/images/%E5%8D%9A%E5%AE%A21/nodejs%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png" alt="nodejs安装成功"></p>
-</li>
-<li><p>nodejs安装完还会有一个npm组件，同样cmd输入 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-<p><img src="/images/%E5%8D%9A%E5%AE%A21/npm%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png" alt="npm安装成功"></p>
-</li>
-<li><p>利用npm 安装 cnpm<br>cnpm是淘宝团队在国内的镜像源，下载速度比较快，cnpm和npm本质上是一个东西，只是提供商不同，同样在cmd中输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-<p>安装成功<br><img src="/images/%E5%8D%9A%E5%AE%A21/cnpm%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png" alt="npm安装成功"></p>
-</li>
-<li><p>利用安装好的cnpm安装hexo框架<br>cmd输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<p>安装成功后输入 <code>hexo -v</code><br><img src="/images/%E5%8D%9A%E5%AE%A21/hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png" alt="hexo安装成功"></p>
-</li>
-</ol>
-<hr>
-<h2 id="第三步：创建blog"><a href="#第三步：创建blog" class="headerlink" title="第三步：创建blog"></a>第三步：创建blog</h2><ol>
-<li><p>生成blog文件，使用其他名称可以在<code>blog</code>位置更改</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir blog</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>初始化博客</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-<p><img src="/images/%E5%8D%9A%E5%AE%A21/%E5%88%9D%E5%A7%8B%E5%8C%96%E5%8D%9A%E5%AE%A2.png" alt="初始化博客成功"></p>
-</li>
-</ol>
-<hr>
-<h2 id="第四步：开始写博客"><a href="#第四步：开始写博客" class="headerlink" title="第四步：开始写博客"></a>第四步：开始写博客</h2><ol>
-<li><p>创建第一篇博客“我的第一篇博客”</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;我的第一篇博客&quot;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/%E5%8D%9A%E5%AE%A21/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2.png" alt="我的第一篇博客"></p>
-</li>
-<li><p>使用编辑软件编辑新生成的<code>.md</code>格式的文件，然后重新清理，生成，再启动博客，然后登录localhost：4000预览生成的博客。</p>
-</li>
-</ol>
-<p>清理</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo c</span><br></pre></td></tr></table></figure>
-<p>生成</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-<p>启动</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<p><img src="/images/%E5%8D%9A%E5%AE%A21/%E5%8D%9A%E5%AE%A2%E5%90%AF%E5%8A%A8%E6%88%90%E5%8A%9F.png" alt="博客启动成功"></p>
-<hr>
-<h2 id="第五步：部署到GitHub上-自己要先创建GitHub账号"><a href="#第五步：部署到GitHub上-自己要先创建GitHub账号" class="headerlink" title="第五步：部署到GitHub上(自己要先创建GitHub账号)"></a>第五步：部署到GitHub上(自己要先创建GitHub账号)</h2><ol>
-<li>新建仓库，给自己的仓库命名 </li>
-</ol>
-<p><strong>注意</strong> ：<em>部署个人博客的GitHub仓库的命名必须要符合特定的要求才行！！！</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用户名.github.io</span><br></pre></td></tr></table></figure>
-<h3 id="格式必须保持这样，因为这个也是博客的网址"><a href="#格式必须保持这样，因为这个也是博客的网址" class="headerlink" title="格式必须保持这样，因为这个也是博客的网址"></a><strong>格式必须保持这样</strong>，因为这个也是博客的网址</h3><ol start="2">
-<li><p>安装部署软件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --sava hexo-deployer-git</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置  <strong>_config.yml</strong></p>
-</li>
-</ol>
-<p><strong>将文件拉到最下端，找到#Deployment</strong></p>
-<ol>
-<li>type: git</li>
-<li>repo: <a href="https://github.com/ZZzhenKun/ZZzhenKun.github.io.git" target="_blank" rel="noopener">https://github.com/ZZzhenKun/ZZzhenKun.github.io.git</a></li>
-<li>branch: master</li>
-</ol>
-<p><strong>注意</strong>：冒号后面必须要空一格</p>
-<ol start="4">
-<li>部署到GitHub<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure></li>
-</ol>
-<p><strong>这里第一次部署失败要输入用户名和姓名，更具提示</strong><br>如果成功会弹出一个GitHub登录窗口，输入账户和密码就可以部署成功</p>
-<hr>
-
-          
+<h2 id="第二步：安装nodejs-npm-cnpm-hexo。nodejs官网网址：http-nodejs-cn-下载自己系统的对应版本，安装一直下一步。"><a href="#第二步：安装nodejs-npm-cnpm-hexo。nodejs官网网址：http-nodejs-cn-下载自己系统的对应版本，安装一直下一步。" class="headerlink" title="第二步：安装nodejs/npm/cnpm/hexo。nodejs官网网址：http://nodejs.cn/ 下载自己系统的对应版本，安装一直下一步。"></a>第二步：安装nodejs/npm/cnpm/hexo。nodejs官网网址：<a href="http://nodejs.cn/" target="_blank" rel="noopener">http://nodejs.cn/</a> 下载自己系统的对应版本，安装一直下一步。</h2>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/07/10/%E9%80%9A%E8%BF%87hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1225,15 +948,24 @@
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
             
               
               
               <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">1</span>
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 
@@ -1248,12 +980,6 @@
                     <a href="https://github.com/ZZzhenKun" target="_blank" title="GitHub">
                       
                         <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="1042134104@qq.com" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                   </span>
                 
             </div>
@@ -1302,7 +1028,7 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
 
 
 
