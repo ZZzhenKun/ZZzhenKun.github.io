@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="JavaScript基础知识," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="JS正则表达式(正则表达式用于定义一些字符串的规则)创建正则表达式的语法 创建对象12345678var 变量 &#x3D; new RegExp(&quot;正则表达式&quot;,&quot;匹配模式&quot;);    使用typeof检查正则对象，会返回object 	var reg &#x3D; new RegExp(&quot;a&quot;);     这个正则表达式可以来检查一个字符串中是否含有a在构造函数中可以传递一个匹配模式作为第二个参数， 	可以是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript基础知识点">
+<meta property="og:url" content="http://yoursite.com/2020/12/22/JavaScript%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/index.html">
+<meta property="og:site_name" content="张震坤·博客">
+<meta property="og:description" content="JS正则表达式(正则表达式用于定义一些字符串的规则)创建正则表达式的语法 创建对象12345678var 变量 &#x3D; new RegExp(&quot;正则表达式&quot;,&quot;匹配模式&quot;);    使用typeof检查正则对象，会返回object 	var reg &#x3D; new RegExp(&quot;a&quot;);     这个正则表达式可以来检查一个字符串中是否含有a在构造函数中可以传递一个匹配模式作为第二个参数， 	可以是">
+<meta property="og:image" content="http://yoursite.com/images/JavaScript%E5%9F%BA%E7%A1%80.png">
+<meta property="article:published_time" content="2020-12-22T01:07:17.000Z">
+<meta property="article:modified_time" content="2020-12-22T01:15:06.837Z">
+<meta property="article:author" content="张震坤">
+<meta property="article:tag" content="JavaScript基础知识">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/images/JavaScript%E5%9F%BA%E7%A1%80.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/12/22/JavaScript基础知识点/"/>
+
+
+
+
+
+  <title>JavaScript基础知识点 | 张震坤·博客</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">张震坤·博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Man proposes  God disposes</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/12/22/JavaScript%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="张震坤">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/%E5%A4%B4%E5%83%8F/ZZK.JPEG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张震坤·博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">JavaScript基础知识点</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-12-22T09:07:17+08:00">
+                2020-12-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h1><h2 id="正则表达式-正则表达式用于定义一些字符串的规则"><a href="#正则表达式-正则表达式用于定义一些字符串的规则" class="headerlink" title="正则表达式(正则表达式用于定义一些字符串的规则)"></a>正则表达式(正则表达式用于定义一些字符串的规则)</h2><h3 id="创建正则表达式的语法"><a href="#创建正则表达式的语法" class="headerlink" title="创建正则表达式的语法"></a>创建正则表达式的语法</h3><ul>
+<li>创建对象<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> 变量 = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"正则表达式"</span>,<span class="string">"匹配模式"</span>);</span><br><span class="line">    使用<span class="keyword">typeof</span>检查正则对象，会返回object</span><br><span class="line"> 	<span class="keyword">var</span> reg = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"a"</span>); </span><br><span class="line">    这个正则表达式可以来检查一个字符串中是否含有a</span><br><span class="line">在构造函数中可以传递一个匹配模式作为第二个参数，</span><br><span class="line"> 	可以是 </span><br><span class="line"> 		i 忽略大小写 </span><br><span class="line"> 		g 全局匹配模式</span><br></pre></td></tr></table></figure></li>
+<li>字面量来创建<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">使用字面量来创建正则表达式</span><br><span class="line">	语法：<span class="keyword">var</span> 变量 = <span class="regexp">/正则表达式/</span>匹配模式</span><br><span class="line">使用字面量的方式创建更加简单</span><br><span class="line">	使用构造函数创建更加灵活</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reg = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"a"</span>,<span class="string">"i"</span>);</span><br><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/a/i</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="规则表示方式"><a href="#规则表示方式" class="headerlink" title="规则表示方式"></a>规则表示方式</h3><a id="more"></a></li>
+</ul>
+<ol>
+<li>使用 | 表示或者的意思<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg = <span class="regexp">/a|b|c/</span>;</span><br></pre></td></tr></table></figure></li>
+<li>[]里的内容也是或的关系<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[]里的内容也是或的关系</span><br><span class="line">[ab] == a|b</span><br><span class="line">[a-z] 任意小写字母</span><br><span class="line">[A-Z] 任意大写字母</span><br><span class="line">[A-z] 任意字母</span><br><span class="line">[<span class="number">0</span><span class="number">-9</span>] 任意数字</span><br></pre></td></tr></table></figure></li>
+<li>[^ ] 表示非<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">reg = <span class="regexp">/[^0-9]/</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(reg.test(<span class="string">"12a3456"</span>)); <span class="comment">//true，除了数字以外还有非数字的内容</span></span><br></pre></td></tr></table></figure></li>
+<li>split()：根据任意字母来将字符串拆分</li>
+</ol>
+<ul>
+<li>可以将一个字符串拆分为一个数组</li>
+<li>方法中可以传递一个正则表达式作为参数，这样方法将会根据正则表达式去拆分字符串</li>
+<li>这个方法即使不指定全局匹配，也会全都插分<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> result = str.split(<span class="regexp">/[A-z]/</span>);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="5">
+<li>search():可以搜索字符串中是否含有指定内容</li>
+</ol>
+<ul>
+<li>如果搜索到指定内容，则会返回第一次出现的索引，如果没有搜索到返回-1</li>
+<li>它可以接受一个正则表达式作为参数，然后会根据正则表达式去检索字符串</li>
+<li>serach()只会查找第一个，即使设置全局匹配也没用<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">result = str.search(<span class="regexp">/a[bef]c/</span>);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="6">
+<li>match():可以根据正则表达式，从一个字符串中将符合条件的内容提取出来</li>
+</ol>
+<ul>
+<li>默认情况下我们的match只会找到第一个符合要求的内容，找到以后就停止检索</li>
+<li>我们可以设置正则表达式为全局匹配模式，这样就会匹配到所有的内容</li>
+<li>可以为一个正则表达式设置多个匹配模式，且顺序无所谓</li>
+<li>match()会将匹配到的内容封装到一个数组中返回，即使只查询到一个结果<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">result = str.match(<span class="regexp">/[a-z]/ig</span>);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="7">
+<li>replace():可以将字符串中指定内容替换为新的内容</li>
+</ol>
+<ul>
+<li>参数：<ol>
+<li>被替换的内容，可以接受一个正则表达式作为参数</li>
+<li>新的内容</li>
+</ol>
+</li>
+<li>默认只会替换第一个<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">result = str.replace(<span class="regexp">/[a-z]/gi</span> , <span class="string">""</span>);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="量词-通过量词可以设置一个内容出现的次数-量词只对它前边的一个内容起作用"><a href="#量词-通过量词可以设置一个内容出现的次数-量词只对它前边的一个内容起作用" class="headerlink" title="量词:通过量词可以设置一个内容出现的次数,量词只对它前边的一个内容起作用"></a>量词:通过量词可以设置一个内容出现的次数,量词只对它前边的一个内容起作用</h3><ol>
+<li>{n} 正好出现n次<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/a&#123;3&#125;/</span>;</span><br></pre></td></tr></table></figure></li>
+<li>{m,n} 出现m-n次     <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg = <span class="regexp">/ab&#123;1,3&#125;c/</span>;</span><br></pre></td></tr></table></figure></li>
+<li>{m,} m次以上<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg = <span class="regexp">/ab&#123;3,&#125;c/</span>;</span><br></pre></td></tr></table></figure></li>
+<li>+ 至少一个，相当于{1,}<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg = <span class="regexp">/ab+c/</span>;</span><br></pre></td></tr></table></figure></li>
+<li>* 0个或多个，相当于{0,}<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg = <span class="regexp">/ab*c/</span>;</span><br></pre></td></tr></table></figure></li>
+<li>? 0个或1个，相当于{0,1}<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg = <span class="regexp">/ab?c/</span>;</span><br></pre></td></tr></table></figure></li>
+<li>检查一个字符串中是否以a开头</li>
+</ol>
+<ul>
+<li>^ 表示开头</li>
+<li>$ 表示结尾<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">reg = <span class="regexp">/^a/</span>; <span class="comment">//匹配开头的a</span></span><br><span class="line">reg = <span class="regexp">/a$/</span>; <span class="comment">//匹配结尾的a</span></span><br><span class="line">reg = <span class="regexp">/^a$/</span>;<span class="comment">//</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="8">
+<li>转移字符<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\. 来表示.</span><br><span class="line">\\  表示\</span><br></pre></td></tr></table></figure></li>
+<li>元字符：拥有特殊含义的字符</li>
+</ol>
+<ul>
+<li>\w<ul>
+<li>任意字母、数字、_  [A-z0-9_]</li>
+</ul>
+</li>
+<li>\W<ul>
+<li>除了字母、数字、_  [^A-z0-9_]</li>
+</ul>
+</li>
+<li>\d<ul>
+<li>任意的数字 [0-9]</li>
+</ul>
+</li>
+<li>\D<ul>
+<li>除了数字 [^0-9]</li>
+</ul>
+</li>
+<li>\s<ul>
+<li>空格</li>
+</ul>
+</li>
+<li>\S<ul>
+<li>除了空格</li>
+</ul>
+</li>
+<li>\b<ul>
+<li>单词边界</li>
+</ul>
+</li>
+<li>\B<ul>
+<li>除了单词边界<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 创建一个正则表达式检查一个字符串中是否含有单词child</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line"></span><br><span class="line">reg = <span class="regexp">/\bchild\b/</span>;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="DOM-通过document获取对象来操作html"><a href="#DOM-通过document获取对象来操作html" class="headerlink" title="DOM(通过document获取对象来操作html)"></a>DOM(通过document获取对象来操作html)</h2><h3 id="DOM的查询"><a href="#DOM的查询" class="headerlink" title="DOM的查询"></a>DOM的查询</h3><ol>
+<li><p>事件: 就是用户和浏览器之间的交互行为,比如：点击按钮，鼠标移动、关闭窗口</p>
+<ul>
+<li>可以为按钮的对应事件绑定处理函数的形式来响应事件</li>
+<li>这样当事件被触发时，其对应的函数将会被调用</li>
+</ul>
+</li>
+<li><p>window.onload:onload事件会在整个页面加载完成之后才触发</p>
+<ul>
+<li>该事件对应的响应函数将会在页面加载完成之后执行，这样可以确保我们的代码执行时所有的DOM对象已经加载完毕了 <br> <strong>也可以将js代码编写到页面的下部</strong><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">//获取id为btn的按钮</span></span><br><span class="line">    <span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">"btn"</span>);</span><br><span class="line">    <span class="comment">//为按钮绑定一个单击响应函数</span></span><br><span class="line">    btn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        alert(<span class="string">"hello"</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>innerHTML用于获取元素内部的HTML代码的</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(inputs[i].innerHTML);</span><br></pre></td></tr></table></figure></li>
+<li><p>如果需要读取元素节点属性，直接使用 元素.属性名。<br>例子：元素.id  元素.name 元素.value</p>
+</li>
+</ol>
+<ul>
+<li><strong>注意</strong>：class属性不能采用这种方式，读取class属性时需要使用 元素.className</li>
+</ul>
+<ol start="5">
+<li>childNodes属性会获取包括文本节点在呢的所有<strong>节点</strong>，根据DOM标签标签间空白也会当成文本节点</li>
+</ol>
+<ul>
+<li>（<strong>注意</strong>：在IE8及以下的浏览器中，不会将空白文本当成子节点，所以该属性在IE8中会返回4个子元素而其他浏览器是9个）</li>
+</ul>
+<ol start="6">
+<li>children属性可以获取当前元素的所有子<strong>元素</strong></li>
+<li>firstChild可以获取到当前元素的第一个子<strong>节点</strong>（包括空白文本节点）</li>
+<li>onclick 事件会在元素被点击时发生<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">a.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> tr = <span class="keyword">this</span>.parentNode.parentNode;</span><br><span class="line">    <span class="comment">// 获取要删除员工的名字</span></span><br><span class="line">    <span class="keyword">var</span> rname = tr.getElementsByTagName(<span class="string">"td"</span>)[<span class="number">0</span>].innerHTML;</span><br><span class="line">    <span class="comment">// 删除之前提示是否删除</span></span><br><span class="line">    <span class="keyword">var</span> flag = confirm(<span class="string">"是否删除"</span> + rname + <span class="string">"吗?"</span>);</span><br><span class="line">    <span class="keyword">if</span>(flag == <span class="literal">true</span>)</span><br><span class="line">        tr.parentNode.removeChild(tr);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 取消默认行为，即超链接的跳转</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>获取body标签<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> body = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"body"</span>)[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在document中有一个属性body，它保存的是body的引用</span></span><br><span class="line"><span class="keyword">var</span> body = <span class="built_in">document</span>.body;</span><br></pre></td></tr></table></figure></li>
+<li>document.all代表页面中所有的元素<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var all &#x3D; document.all;</span><br></pre></td></tr></table></figure></li>
+<li>document.querySelector():需要一个选择器的字符串作为参数，可以根据一个CSS选择器来查询一个元素节点对象<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> div = <span class="built_in">document</span>.querySelector(<span class="string">".box1 div"</span>);</span><br><span class="line"><span class="comment">// 使用该方法总会返回唯一的一个元素，如果满足条件的元素有多个，那么它只会返回第一个</span></span><br></pre></td></tr></table></figure></li>
+<li>document.querySelectorAll()：该方法和querySelector()用法类似，不同的是它会将符合条件的元素封装到一个数组中返回<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">box1 = <span class="built_in">document</span>.querySelectorAll(<span class="string">".box1"</span>);</span><br><span class="line"><span class="comment">// 即使符合条件的元素只有一个，它也会返回数组</span></span><br></pre></td></tr></table></figure>
+<h3 id="DOM的增删改"><a href="#DOM的增删改" class="headerlink" title="DOM的增删改"></a>DOM的增删改</h3></li>
+</ol>
+<ul>
+<li>增</li>
+</ul>
+<ol>
+<li>document.createElement():可以用于创建一个<strong>元素节点</strong>对象<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> li = <span class="built_in">document</span>.createElement(<span class="string">"li"</span>);</span><br><span class="line"><span class="comment">// 它需要一个标签名作为参数，将会根据该标签名创建元素节点对象，并将创建好的对象作为返回值返回</span></span><br></pre></td></tr></table></figure></li>
+<li>document.createTextNode():可以用来创建一个<strong>文本节点</strong>对象<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gzText = <span class="built_in">document</span>.createTextNode(<span class="string">"广州"</span>);</span><br><span class="line"><span class="comment">// 需要一个文本内容作为参数，将会根据该内容创建文本节点，并将新的节点返回</span></span><br></pre></td></tr></table></figure></li>
+<li>appendChild():向一个父节点中添加一个新的子节点(父节点.appendChild(子节点))<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">li.appendChild(gzText);</span><br><span class="line"><span class="comment">// 广州节点添加到li下</span></span><br></pre></td></tr></table></figure></li>
+<li>insertBefore():可以在指定的子节点前插入新的子节点(父节点.insertBefore(新节点,旧节点))<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">city.insertBefore(li , bj);</span><br><span class="line"><span class="comment">// 在bj前添加li节点</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<ul>
+<li>改</li>
+</ul>
+<ol>
+<li>replaceChild():可以使用指定的子节点替换已有的子节点(父节点.replaceChild(新节点,旧节点))<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">city.replaceChild(li , bj);</span><br><span class="line"><span class="comment">// 使用bj替换li</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<ul>
+<li>删</li>
+</ul>
+<ol>
+<li>removeChild():可以删除一个子节点(父节点.removeChild(子节点))<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bj.parentNode.removeChild(bj);</span><br><span class="line"><span class="comment">// 子节点.parentNode.removeChild(子节点):此方法可以不用知道父节点就可以删除自身节点</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<ul>
+<li>读取</li>
+</ul>
+<ol>
+<li>city.innerHTML:读取#city内的HTML代码<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(city.innerHTML);</span><br></pre></td></tr></table></figure></li>
+</ol>
+<ul>
+<li>添加</li>
+</ul>
+<ol>
+<li>bj.innnerHTML = String:向bj中添加字符串<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bj.innerHTML = <span class="string">"昌平"</span>;</span><br></pre></td></tr></table></figure></li>
+<li>appendChild(li) 或者 city.innerHTML += “<li>广州</li>“:一般两种方式结合使用<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment">//向li中设置文本</span></span><br><span class="line">li.innerHTML = <span class="string">"广州"</span>;</span><br><span class="line">    <span class="comment">//将li添加到city中</span></span><br><span class="line">city.appendChild(li);</span><br><span class="line">----------------------------------------------</span><br><span class="line">city.innerHTML += <span class="string">"&lt;li&gt;广州&lt;/li&gt;"</span>;</span><br><span class="line">    <span class="comment">// 直接通过innerHTML添加</span></span><br></pre></td></tr></table></figure>
+<h3 id="使用DOM操作CSS"><a href="#使用DOM操作CSS" class="headerlink" title="使用DOM操作CSS"></a>使用DOM操作CSS</h3></li>
+<li>修改box1的宽度:元素.style.样式名 = 样式值<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">box1.style.width = <span class="string">"300px"</span>;</span><br><span class="line">box1.style.backgroundColor = <span class="string">"yellow"</span>;</span><br><span class="line">注意：如果CSS的样式名中含有-，</span><br><span class="line">	这种名称在JS中是不合法的比如background-color</span><br><span class="line">	需要将这种样式名修改为驼峰命名法，</span><br><span class="line">	去掉-，然后将-后的字母大写</span><br></pre></td></tr></table></figure></li>
+</ol>
+<ul>
+<li>我们通过style属性设置的样式都是内联样式，而内联样式有较高的优先级，所以通过JS修改的样式往往会立即显示</li>
+<li>但是如果在样式中写了!important，则此时样式会有最高的优先级，即使通过JS也不能覆盖该样式，此时将会导致JS修改样式失效</li>
+<li><strong>所以尽量不要为样式添加!important</strong></li>
+</ul>
+<ol start="2">
+<li>读取元素的样式:元素.style.样式名<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(box1.style.width);</span><br></pre></td></tr></table></figure></li>
+</ol>
+<ul>
+<li>通过style属性设置和读取的都是内联样式,无法读取样式表中的样式</li>
+</ul>
+<ol start="3">
+<li>获取元素的当前显示的样式 <strong>(IE)</strong> :元素.currentStyle.样式名</li>
+</ol>
+<ul>
+<li><strong>currentStyle只有IE浏览器支持，其他的浏览器都不支持</strong><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alert(box1.currentStyle.width);<span class="comment">// 读取</span></span><br><span class="line">box1.currentStyle.width = <span class="string">"200px"</span>; <span class="comment">// 修改</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="4">
+<li>获取元素的当前显示的样式 <strong>(其他浏览器)</strong> :getComputedStyle()这个方法来获取元素当前的样式</li>
+</ol>
+<ul>
+<li><strong>但是该方法不支持IE8及以下的浏览器</strong><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = getComputedStyle(box1,<span class="literal">null</span>);</span><br><span class="line">这个方法是<span class="built_in">window</span>的方法，可以直接使用</span><br><span class="line">* 需要两个参数</span><br><span class="line">* 		第一个：要获取样式的元素</span><br><span class="line">* 		第二个：可以传递一个伪元素，一般都传<span class="literal">null</span></span><br><span class="line">* 该方法会返回一个对象，对象中封装了当前元素对应的样式</span><br><span class="line">* 	    可以通过对象.样式名来读取样式</span><br><span class="line">* 	    如果获取的样式没有设置，则会获取到真实的值，而不是默认值</span><br><span class="line">* 	    比如：没有设置width，它不会获取到auto，而是一个长度</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>通过currentStyle和getComputedStyle()读取到的样式都是只读的，不能修改，如果要修改必须通过style属性</strong><br>5. 通用方法：定义一个函数，判断浏览器支持哪种函数则调用对应函数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">* 定义一个函数，用来获取指定元素的当前的样式</span><br><span class="line">* 参数：</span><br><span class="line">* 		obj 要获取样式的元素</span><br><span class="line">* 		name 要获取的样式名</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getStyle</span>(<span class="params">obj , name</span>)</span>&#123;   </span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">window</span>.getComputedStyle)&#123;</span><br><span class="line">        <span class="comment">//正常浏览器的方式，具有getComputedStyle()方法</span></span><br><span class="line">        <span class="keyword">return</span> getComputedStyle(obj , <span class="literal">null</span>)[name];</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="comment">//IE8的方式，没有getComputedStyle()方法</span></span><br><span class="line">        <span class="keyword">return</span> obj.currentStyle[name];</span><br><span class="line">&#125;	</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> w = getStyle(box1,<span class="string">"w</span></span><br><span class="line"><span class="string">alert(w);</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//正常浏览器的方式</span></span><br><span class="line"><span class="comment">//alert(getComputedStyle(box1,null).backgroundColor);</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//IE8的方式</span></span><br><span class="line"><span class="comment">//alert(box1.currentStyle.backgroundColor);</span></span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>clientWidth / clientHeight：这两个属性可以获取元素的可见宽度和高度</li>
+</ol>
+<ul>
+<li>这些属性都是不带px的，返回都是一个数字，可以直接进行计算</li>
+<li>会获取元素宽度和高度，包括内容区和内边距</li>
+<li>这些属性都是只读的，不能修改<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alert(box1.clientWidth);</span><br><span class="line">alert(box1.clientHeight);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="7">
+<li>offsetWidth / offsetHeight:获取元素的整个的宽度和高度，包括内容区、内边距和<strong>边框</strong><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(box1.offsetWidth);</span><br></pre></td></tr></table></figure></li>
+<li>offsetParent:可以用来获取当前元素的定位父元素</li>
+</ol>
+<ul>
+<li>会获取到离当前元素最近的开启了定位的祖先元素</li>
+<li>如果所有的祖先元素都没有开启定位，则返回body<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> op = box1.offsetParent;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="9">
+<li>offsetLeft / offsetTop：当前元素相对于其定位父元素的水平偏移量 / 垂直偏移量</li>
+<li>scrollWidth / scrollHeight:可以获取元素整个滚动区域的宽度和高度<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alert(box4.clientHeight);</span><br><span class="line">alert(box4.scrollWidth);</span><br></pre></td></tr></table></figure></li>
+<li>scrollLeft / scrollTop:可以获取水平 / 垂直滚动条滚动的距离<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alert(box4.scrollLeft);</span><br><span class="line">alert(box4.scrollTop);</span><br></pre></td></tr></table></figure></li>
+<li>scrollHeight - scrollTop == clientHeight:说明垂直滚动条滚动到底了</li>
+<li>onscroll:该事件会在元素的滚动条滚动时触发</li>
+<li>disabled:属性可以设置一个元素是否禁用<ul>
+<li>如果设置为true，则元素禁用</li>
+<li>如果设置为false，则元素可用</li>
+</ul>
+</li>
+</ol>
+<h3 id="事件的委派、绑定、传播"><a href="#事件的委派、绑定、传播" class="headerlink" title="事件的委派、绑定、传播"></a>事件的委派、绑定、传播</h3><ol>
+<li>事件的委派：指将事件统一绑定给元素的共同的祖先元素，这样当后代元素上的事件触发时，会一直冒泡到祖先元素从而通过祖先元素的响应函数来处理事件。</li>
+</ol>
+<ul>
+<li>target:触发事件的对象是我们期望的元素，则执行否则不执行<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(event.target.className == <span class="string">"link"</span>)&#123;</span><br><span class="line">    alert(<span class="string">"我是ul的单击响应函数"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="2">
+<li>事件的绑定:它只能同时为一个元素的一个事件绑定一个响应函数，不能绑定多个，如果绑定了多个，则后边会覆盖掉前边的。</li>
+</ol>
+<ul>
+<li>addEventListener():通过这个方法也可以为元素绑定响应函数,<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>事件的字符串，不要on</span><br><span class="line"><span class="number">2.</span>回调函数，当事件触发时该函数会被调用</span><br><span class="line"><span class="number">3.</span>是否在捕获阶段触发事件，需要一个布尔值，一般都传<span class="literal">false</span></span><br><span class="line">使用addEventListener()可以同时为一个元素的相同事件同时绑定多个响应函数，这样当事件被触发时，响应函数将会按照函数的绑定顺序执行</span><br><span class="line"></span><br><span class="line">btn01.addEventListener(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="number">1</span>);</span><br><span class="line">&#125;,<span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">btn01.addEventListener(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="number">2</span>);</span><br><span class="line">&#125;,<span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">btn01.addEventListener(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="number">3</span>);</span><br><span class="line">&#125;,<span class="literal">false</span>);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="3">
+<li>事件的传播:<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>捕获阶段</span><br><span class="line">- 在捕获阶段时从最外层的祖先元素，向目标元素进行事件的捕获，但是默认此时不会触发事件</span><br><span class="line"><span class="number">2.</span>目标阶段</span><br><span class="line">- 事件捕获到目标元素，捕获结束开始在目标元素上触发事件</span><br><span class="line"><span class="number">3.</span>冒泡阶段</span><br><span class="line">- 事件从目标元素向他的祖先元素传递，依次触发祖先元素上的事件</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p><img src="/images/JavaScript%E5%9F%BA%E7%A1%80.png" alt="JavaScript基础知识"></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag"># JavaScript基础知识</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/12/20/CSS%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" rel="next" title="CSS相关知识总结">
+                <i class="fa fa-chevron-left"></i> CSS相关知识总结
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/%E5%A4%B4%E5%83%8F/ZZK.JPEG"
+                alt="张震坤" />
+            
+              <p class="site-author-name" itemprop="name">张震坤</p>
+              <p class="site-description motion-element" itemprop="description">重庆邮电大学2019级硕士生         热情的学习者； 狂热的数码迷</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/ZZzhenKun" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JS"><span class="nav-number">1.</span> <span class="nav-text">JS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#正则表达式-正则表达式用于定义一些字符串的规则"><span class="nav-number">1.1.</span> <span class="nav-text">正则表达式(正则表达式用于定义一些字符串的规则)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建正则表达式的语法"><span class="nav-number">1.1.1.</span> <span class="nav-text">创建正则表达式的语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#规则表示方式"><span class="nav-number">1.1.2.</span> <span class="nav-text">规则表示方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#量词-通过量词可以设置一个内容出现的次数-量词只对它前边的一个内容起作用"><span class="nav-number">1.1.3.</span> <span class="nav-text">量词:通过量词可以设置一个内容出现的次数,量词只对它前边的一个内容起作用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM-通过document获取对象来操作html"><span class="nav-number">1.2.</span> <span class="nav-text">DOM(通过document获取对象来操作html)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM的查询"><span class="nav-number">1.2.1.</span> <span class="nav-text">DOM的查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM的增删改"><span class="nav-number">1.2.2.</span> <span class="nav-text">DOM的增删改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用DOM操作CSS"><span class="nav-number">1.2.3.</span> <span class="nav-text">使用DOM操作CSS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件的委派、绑定、传播"><span class="nav-number">1.2.4.</span> <span class="nav-text">事件的委派、绑定、传播</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">张震坤</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -251,6 +251,155 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/12/22/JavaScript%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="张震坤">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/%E5%A4%B4%E5%83%8F/ZZK.JPEG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张震坤·博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/12/22/JavaScript%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/" itemprop="url">JavaScript基础知识点</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-12-22T09:07:17+08:00">
+                2020-12-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h1><h2 id="正则表达式-正则表达式用于定义一些字符串的规则"><a href="#正则表达式-正则表达式用于定义一些字符串的规则" class="headerlink" title="正则表达式(正则表达式用于定义一些字符串的规则)"></a>正则表达式(正则表达式用于定义一些字符串的规则)</h2><h3 id="创建正则表达式的语法"><a href="#创建正则表达式的语法" class="headerlink" title="创建正则表达式的语法"></a>创建正则表达式的语法</h3><ul>
+<li>创建对象<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> 变量 = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"正则表达式"</span>,<span class="string">"匹配模式"</span>);</span><br><span class="line">    使用<span class="keyword">typeof</span>检查正则对象，会返回object</span><br><span class="line"> 	<span class="keyword">var</span> reg = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"a"</span>); </span><br><span class="line">    这个正则表达式可以来检查一个字符串中是否含有a</span><br><span class="line">在构造函数中可以传递一个匹配模式作为第二个参数，</span><br><span class="line"> 	可以是 </span><br><span class="line"> 		i 忽略大小写 </span><br><span class="line"> 		g 全局匹配模式</span><br></pre></td></tr></table></figure></li>
+<li>字面量来创建<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">使用字面量来创建正则表达式</span><br><span class="line">	语法：<span class="keyword">var</span> 变量 = <span class="regexp">/正则表达式/</span>匹配模式</span><br><span class="line">使用字面量的方式创建更加简单</span><br><span class="line">	使用构造函数创建更加灵活</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reg = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"a"</span>,<span class="string">"i"</span>);</span><br><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/a/i</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="规则表示方式"><a href="#规则表示方式" class="headerlink" title="规则表示方式"></a>规则表示方式</h3>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/12/22/JavaScript%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/12/20/CSS%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -898,7 +1047,7 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -920,7 +1069,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
